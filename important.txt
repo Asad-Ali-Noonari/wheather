@@ -1,0 +1,44 @@
+Note:
+1)  Formula for converting from Fahrenheit to Celsius
+    (Fahrenheit - 32) * (5 / 9)
+
+2)  navigator: 
+        The window.navigator object contains information about the visitor's browser.
+3)  geolocation
+        The geolocation property returns a Geolocation object that can be used to locate the user's position.
+        Since this can compromise user privacy, the position is not available unless the user approves it.
+4)  getCurrentPosition
+        The getCurrentPosition() method is used to return the user's position.
+5)  position.coords.longitude
+        The longitude as a decimal number (always returned)
+6)  position.coords.latitude
+        The latitude as a decimal number (always returned)
+7)  fetch()
+         allows you to make network requests similar to XMLHttpRequest (XHR). The main difference is that the Fetch API uses Promises, which enables a simpler and cleaner API, avoiding callback hell and having to remember the complex API of XMLHttpRequest.
+8)  json()
+        parse the response as JSON
+/*
+    coords.accuracy	
+        The accuracy of position (always returned)
+    coords.altitude	
+        The altitude in meters above the mean sea level (returned if available)
+    coords.altitudeAccuracy	
+        The altitude accuracy of position (returned if available)
+    coords.heading	
+        The heading as degrees clockwise from North (returned if available)
+    coords.speed	
+        The speed in meters per second (returned if available)
+    timestamp	
+        The date/time of the response (returned if available)
+*/
+
+
+/*
+    Note: some api don't work due to localhost for cross browser also know as Cross-Origin Read Blocking (CORB) 
+    for enabling cross-origin requests to anywhere use this url 
+    "https://cors-anywhere.herokuapp.com"
+    here is how to use
+    const proxy = "https://cors-anywhere.herokuapp.com";
+    const api   = `${proxy}http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=3dnmbqOLQTGyX4FSb3yB4A76CIouGeuz&q=${lat}%2C${long}`;
+    
+*/
